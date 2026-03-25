@@ -1,0 +1,11 @@
+{
+    "version": 1,
+    "hooks": {
+      "beforeShellExecution": [
+        {
+          "comment": "观察健康状态",
+          "command": "node .cursor/hooks/health-monitor.js"
+        }
+      ]
+    }
+  }
