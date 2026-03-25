@@ -3,7 +3,7 @@
     "hooks": {
       "beforeShellExecution": [
         {
-          "comment": "观察健康状态",
+          "comment": "观察 chrome 流量 健康状态",
           "command": "node .cursor/hooks/health-monitor.js"
         }
       ]
