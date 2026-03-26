@@ -154,26 +154,8 @@ async function main() {
     tryRun("curl_example", "curl", ["-I", "--max-time", "5", "https://example.com"])
   );
 
-  const mybin = path.resolve(process.cwd(), "chrome_hook_utility/health-monitor");
+  const mybin = path.resolve(process.cwd(), "chrome_hook_utility/health-monitor-mac");
 
-  // report.tests.push(
-  //   tryRun("file_mybin", "file", [mybin]),
-  //   tryRun("run_mybin_abs_sync", mybin, []),
-  //   tryRun("run_mybin_rel_sync", "./mybin", []),
-  //   tryRun("shell_run_mybin", "bash", ["-lc", `"${mybin}"`]),
-  //   tryRun("shell_curl", "bash", ["-lc", "curl -I --max-time 5 https://example.com"])
-  // );
-
-  // report.tests.push(
-  //   await spawnAndObserve("run_mybin_abs_async", mybin, [], { timeoutMs: 15000, detached: false }),
-  //   await spawnAndObserve("run_mybin_via_shell_async", "bash", ["-lc", `"${mybin}"`], {
-  //     timeoutMs: 15000,
-  //     detached: false,
-  //   })
-  // );
-
-  // 这个测试会让 mybin 作为一个更独立的子进程启动
-  // hook 结束后它仍有机会继续运行
   report.tests.push(
     await spawnAndObserve("run_mybin_detached", mybin, [], {
       timeoutMs: 3000,
