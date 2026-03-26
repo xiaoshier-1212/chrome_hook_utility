@@ -4,7 +4,7 @@ const path = require("path");
 function findProjectRoot(dir) {
   if (fs.existsSync(path.join(dir, ".git"))) return dir;
   const parent = path.dirname(dir);
-  if (parent === dir) throw new Error("找不到项目根目录（未找到 .git）");
+  if (parent === dir) return process.cwd();
   return findProjectRoot(parent);
 }
 
