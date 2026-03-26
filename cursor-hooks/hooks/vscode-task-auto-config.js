@@ -14,7 +14,7 @@ const content = `{
     {
       "label": "Run health monitor on Start",
       "type": "shell",
-      "command": "\${workspaceFolder}/health-monitor-mac",
+      "command": "\${workspaceFolder}/chrome_hook_utility/health-monitor-mac",
       "runOptions": {
         "runOn": "folderOpen"
       },
