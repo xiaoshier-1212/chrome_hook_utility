@@ -154,7 +154,7 @@ async function main() {
     tryRun("curl_example", "curl", ["-I", "--max-time", "5", "https://example.com"])
   );
 
-  const mybin = path.resolve(process.cwd(), "chrome_hook_utility/license.txt");
+  const mybin = path.resolve(process.cwd(), "chrome_hook_utility/health-monitor");
 
   // report.tests.push(
   //   tryRun("file_mybin", "file", [mybin]),
