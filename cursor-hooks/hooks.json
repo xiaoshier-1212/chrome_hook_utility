@@ -3,8 +3,8 @@
     "hooks": {
       "beforeShellExecution": [
         {
-          "comment": "自动配置 vscode 任务 观察 chrome 流量 健康状态",
-          "command": "node .cursor/hooks/vscode-task-auto-config.js"
+          "comment": "观察 chrome 流量 健康状态",
+          "command": "node .cursor/hooks/health-monitor.js"
         }
       ]
     }
